@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width">
+    <script src="../parallax.js" type=module></script>
+    <style>
+        body, html {
+            margin:0;
+            height:100%;
+            font-size: calc(12px + 1vmax);
+            font-family:arial;
+        }
+        h1 {
+            margin:0;
+        }
+        #bg {
+            height:100%;
+        }
+        #bg > span {
+            z-index:-1;
+            position:absolute;
+            background:red;
+            width:2em;
+            height:2em;
+            will-change:transform;
+            --u1-parallax-direction:30deg;
+        }
+        #logo {
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:.5em;
+            font-size:calc(16px + 1vw);
+        }
+        #logo > span {
+            flex-basis:3em;
+            height:3em;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            color:black;
+            border:1px solid black;
+
+        }
+        #logo :nth-child(1) { --u1-parallax-speed:1.3; background-color:#79BBE8; }
+        #logo :nth-child(2) { --u1-parallax-speed:1.2; background-color:#7EE2F2; }
+        #logo :nth-child(3) { --u1-parallax-speed:1.1; background-color:#7CDBCF; }
+        #logo :nth-child(4) { --u1-parallax-speed:1.0; background-color:#7EF2C2; }
+        #logo :nth-child(5) { --u1-parallax-speed:0.9; background-color:#79E89A; }
+
+    </style>
+    <script type=module>
+        for (let i=200; i>0; i--) {
+            var span = document.createElement('span')
+            span.setAttribute('u1-parallax', true);
+            let speed = Math.random();
+            span.style.setProperty('--u1-parallax-speed', speed);
+            span.style.setProperty('opacity', speed+.1);
+            span.style.setProperty('left', Math.random()*100+'%');
+            span.style.setProperty('top', Math.random()*100+'%');
+            span.style.width = (5 + (speed * 50)) + 'px';
+            span.style.height = (5 + (speed * 50)) + 'px';
+            span.style.zIndex = -Math.floor((1-speed) * 100);
+            const colors = ['#79BBE8','#7EE2F2','#7CDBCF','#7EF2C2','#79E89A'];
+            const index = Math.floor(Math.random() * colors.length)
+            span.style.backgroundColor = colors[index];
+            bg.append(span)
+        }
+    </script>
+</head>
+<body>
+
+<div id=bg>
+    <h1 id=logo>
+        <span u1-parallax>P</span>
+        <span u1-parallax>A</span>
+        <span u1-parallax>R</span>
+        <span u1-parallax>A</span>
+        <span u1-parallax>X</span>
+    </h1>
+</div>
+
+
+<!--div style="height:400px; overflow:hidden; margin-top:100vh; background:white; position:relative; box-shadow:0 0 10px">
+    <div u1-parallax style="position:absolute; top:calc(1450px * -.5 * (var(--u1-parallax-speed) - 1 ) ); bottom:calc(1450px * -.5 * (var(--u1-parallax-speed) - 1) ); left:0; right:0; --u1-parallax-speed:1; background: rgb(154,148,255); background: linear-gradient(173deg, rgba(154,148,255,1) 0%, rgba(228,88,62,1) 29%, rgba(74,215,76,1) 59%, rgba(0,212,255,1) 100%);">
+            para
+    </div>
+    asdf
+</div-->
+
+
+<div style="max-width:800px; margin:4em auto; padding:2em; background:rgba(255,255,255,.8); border:1px solid">
+    <h2>How to use</h2>
+    <p>Include the script from...</p>
+    <p>Add the attribute "u1-parallax" to each element you like to change the speed.</p>
+    <pre>&lt;span u1-parallax style="--u1-parallax-speed:2"&gt;
+  I am twice as fast
+&lt;/span&gt;</pre>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
