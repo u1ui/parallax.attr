@@ -9,7 +9,7 @@ Parallax your Elements
 
 
 ## Demo 
-https://raw.githack.com/nuxodin/u1-parallax/master/tests/demo.html
+https://raw.githack.com/u1ui/parallax.attr/main/tests/demo.html
 
 
 ## Ussage:
