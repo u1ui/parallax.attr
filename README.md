@@ -26,4 +26,4 @@ import 'https://cdn.jsdelivr.net/gh/nuxodin/u1-parallax@1.1.0/u1-parallax.min.js
 
 # Also interesting
 Parallax scrolling Backgrounds
-https://github.com/nuxodin/u1-parallax-bg
+https://github.com/nuxodin/parax-bg
