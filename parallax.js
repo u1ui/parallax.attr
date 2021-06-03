@@ -23,6 +23,8 @@ const parallax = class {
         //if (isNaN(direction)) direction = 180;
         //this.angle = (direction + 90) / 180 * Math.PI;
         this.speed = parseFloat(style.getPropertyValue('--u1-parallax-speed'));
+        if (isNaN(this.speed)) this.speed = .8;
+        onScroll() // todo: better solution?
     }
     positionChange(){
         this.oRect = vpRectWithoutTransform(this.el);
