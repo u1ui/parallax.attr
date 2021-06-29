@@ -28,9 +28,11 @@ const parallax = class {
     }
     positionChange(){
         this.oRect = vpRectWithoutTransform(this.el);
+        if (!this.oRect) return; // hidden
         this.oRect.centerY = this.oRect.top + this.oRect.height/2;
     }
     onScroll(pageCenterY, pageCenterX){ // this has to be very fast, can it be improved?
+        if (!this.oRect) return; // hidden
         const centerDiff = pageCenterY - this.oRect.centerY;
         const yRoute = (this.speed-1) * -centerDiff;
         //const y = yRoute * Math.sin(this.angle);
@@ -82,6 +84,7 @@ addEventListener('resize',(e)=>{
 
 /* helpers */
 function vpRectWithoutTransform(el){
+    if (!el.offsetParent) return null;
     let rect = {
         left  : 0,
         top   : 0,
@@ -95,6 +98,18 @@ function vpRectWithoutTransform(el){
     } while (el);
     return rect;
 }
+/* seams not to be faster
+function vpRectWithoutTransform(el) {
+    if (!el.offsetParent) return null;
+    let rect = el.offsetParent.getBoundingClientRect();
+    return {
+        //left: rect.left + el.offsetLeft,
+        top: rect.top + el.offsetTop,
+        //width: el.offsetWidth,
+        height: el.offsetHeight,
+    }
+}
+*/
 
 wickedElements.define(
     '[u1-parallax]', {
