@@ -12,6 +12,10 @@ function remove(el){
     if (pool.size === 0) removeGlobalListeners();
 }
 
+var styEl = document.createElement('style');
+styEl.innerHTML = '[u1-parallax]{z-index:1; will-change:transform;}';
+document.head.prepend(styEl);
+
 const parallax = class {
     constructor(el){
         this.el = el;
