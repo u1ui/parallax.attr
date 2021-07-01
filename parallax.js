@@ -49,7 +49,6 @@ const parallax = class {
     }
 };
 
-
 function calcViewportRects(e){
     pool.forEach(obj => obj.positionChange());
 }
