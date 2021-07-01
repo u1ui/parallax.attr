@@ -13,7 +13,7 @@ function remove(el){
 }
 
 var styEl = document.createElement('style');
-styEl.innerHTML = '[u1-parallax]{z-index:1; will-change:transform;}';
+styEl.innerHTML = '[u1-parallax]{z-index:1; will-change:translate3d;}';
 document.head.prepend(styEl);
 
 const parallax = class {
@@ -41,10 +41,11 @@ const parallax = class {
         const yRoute = (this.speed-1) * -centerDiff;
         //const y = yRoute * Math.sin(this.angle);
         //const x = yRoute * Math.cos(this.angle);
-        //this.el.style.setProperty('transform', 'translate3d('+x+'px,'+y+'px,0)');
         // todo, only transform if visible?
-        //this.el.style.setProperty('transform', 'translate3d('+0+'px,'+yRoute+'px,0)');
         this.el.style.transform = 'translate3d('+0+'px,'+yRoute+'px,0)';
+        // this.el.attributeStyleMap.set('transform', new CSSTransformValue([
+        //     new CSSTranslate(CSS.px(0),CSS.px(yRoute),CSS.px(0))
+        // ]));
     }
 };
 
@@ -102,18 +103,6 @@ function vpRectWithoutTransform(el){
     } while (el);
     return rect;
 }
-/* seams not to be faster
-function vpRectWithoutTransform(el) {
-    if (!el.offsetParent) return null;
-    let rect = el.offsetParent.getBoundingClientRect();
-    return {
-        //left: rect.left + el.offsetLeft,
-        top: rect.top + el.offsetTop,
-        //width: el.offsetWidth,
-        height: el.offsetHeight,
-    }
-}
-*/
 
 wickedElements.define(
     '[u1-parallax]', {
