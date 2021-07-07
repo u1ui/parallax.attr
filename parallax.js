@@ -13,7 +13,7 @@ function remove(el){
 }
 
 var styEl = document.createElement('style');
-styEl.innerHTML = '[u1-parallax]{z-index:1; will-change:translate3d;}';
+styEl.innerHTML = '[u1-parallax]{z-index:1; will-change:transform;}';
 document.head.prepend(styEl);
 
 const parallax = class {
