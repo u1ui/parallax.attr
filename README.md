@@ -8,8 +8,9 @@ Parallax your Elements
 - lightweight < 4k minified
 
 
-## Demo
+## Demos
 https://raw.githack.com/u1ui/parallax.attr/main/tests/demo.html  
+https://raw.githack.com/u1ui/parallax.attr/main/tests/test.html  
 
 ## Ussage:
 
@@ -26,6 +27,3 @@ import 'https://cdn.jsdelivr.net/gh/nuxodin/u1-parallax@1.1.0/u1-parallax.min.js
 # Also interesting
 Parallax scrolling Backgrounds
 https://github.com/nuxodin/parax-bg
-
-## Demo
-## Demo
