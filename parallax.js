@@ -67,6 +67,7 @@ function addGlobalListeners(){
     addEventListener('resize', onScroll);
     addEventListener('load', onScroll);
     document.addEventListener('scroll', onScroll);
+    addEventListener('wheel', onScroll); // firefox
 }
 function removeGlobalListeners(){
     removeEventListener('resize',calcViewportRects);
@@ -74,7 +75,8 @@ function removeGlobalListeners(){
     removeEventListener('load',calcViewportRects);
     removeEventListener('resize', onScroll);
     removeEventListener('load', onScroll);
-    document.addEventListener('scroll', onScroll);
+    document.removeEventListener('scroll', onScroll);
+    removeEventListener('wheel', onScroll); // firefox
 }
 
 // cache innerHeight, Is that of any use?
