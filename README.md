@@ -15,7 +15,7 @@ https://raw.githack.com/u1ui/parallax.attr/main/tests/test.html
 ## Ussage:
 
 ```js
-import 'https://cdn.jsdelivr.net/gh/u1ui/parallax.attr@1.8.3/u1-parallax.min.js';
+import 'https://cdn.jsdelivr.net/gh/u1ui/parallax.attr@1.8.3/parallax.min.js';
 ```
 
 ```html
