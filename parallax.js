@@ -80,10 +80,10 @@ function removeGlobalListeners(){
 }
 
 // cache innerHeight, Is that of any use?
-let winHeight = innerHeight;
+let winHeight = document.documentElement.clientHeight; // was innerHeight // better this?: https://stackoverflow.com/questions/1248081/how-to-get-the-browser-viewport-dimensions
 let winWidth = innerWidth;
 addEventListener('resize',(e)=>{
-    winHeight = innerHeight;
+    winHeight = document.documentElement.clientHeight; // was innerHeight
     winWidth = innerWidth;
 });
 
