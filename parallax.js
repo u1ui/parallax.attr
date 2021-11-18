@@ -1,3 +1,5 @@
+/* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
 import 'https://cdn.jsdelivr.net/npm/wicked-elements@3.1.2/min.js';
 
 const pool = new Map();
