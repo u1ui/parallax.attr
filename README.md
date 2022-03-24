@@ -1,4 +1,4 @@
-# u1-parallax
+# u1-parallax attribute
 Parallax your Elements
 
 ## Features
