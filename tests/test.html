@@ -22,12 +22,7 @@
             background:red;
             width:2em;
             height:2em;
-            box-shadow:0 0 10px black;
-            border-radius:20px;
-            contain:strict;
-        }
-        #bg > span::after {
-            content:'gix';
+            will-change:transform;
         }
         #logo {
             height:100vh;
@@ -85,6 +80,14 @@
         <span u1-parallax>X</span>
     </h1>
 </div>
+
+
+<!--div style="height:400px; overflow:hidden; margin-top:100vh; background:white; position:relative; box-shadow:0 0 10px">
+    <div u1-parallax style="position:absolute; top:calc(1450px * -.5 * (var(--u1-parallax-speed) - 1 ) ); bottom:calc(1450px * -.5 * (var(--u1-parallax-speed) - 1) ); left:0; right:0; --u1-parallax-speed:1; background: rgb(154,148,255); background: linear-gradient(173deg, rgba(154,148,255,1) 0%, rgba(228,88,62,1) 29%, rgba(74,215,76,1) 59%, rgba(0,212,255,1) 100%);">
+            para
+    </div>
+    asdf
+</div-->
 
 
 <div style="max-width:800px; margin:4em auto; padding:2em; background:rgba(255,255,255,.8); border:1px solid">
