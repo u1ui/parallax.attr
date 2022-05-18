@@ -1,6 +1,5 @@
 /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
 
-import 'https://cdn.jsdelivr.net/npm/wicked-elements@3.1.2/min.js';
 
 const pool = new Map();
 function add(el){
@@ -107,6 +106,24 @@ function vpRectWithoutTransform(el){
     return rect;
 }
 
+/* */
+import {SelectorObserver} from 'https://cdn.jsdelivr.net/gh/u1ui/SelectorObserver.js@2.0.1/SelectorObserver.min.js'
+new SelectorObserver({
+    on: (el) => {
+        const parallaxObj = add(el);
+        parallaxObj.connect();
+
+        //el.parallaxObj = add(el);
+        //this.parallaxObj.connect();
+    },
+    off: (el) => {
+        remove(el)
+    }
+}).observe('[u1-parallax]');
+
+
+/* *
+import 'https://cdn.jsdelivr.net/npm/wicked-elements@3.1.2/min.js';
 wickedElements.define(
     '[u1-parallax]', {
         init() {
@@ -120,3 +137,4 @@ wickedElements.define(
         },
     }
 );
+/* */
