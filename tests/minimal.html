@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width">
+
+    <script src="../parallax.js" type=module></script>
+
+<body>
+
+    <section>
+        <div u1-parallax style="--u1-parallax-speed:1.1;">faster</div>
+        <div u1-parallax style="--u1-parallax-speed:1;">normal</div>
+        <div u1-parallax style="--u1-parallax-speed:0.9;">slower</div>
+    </section>
+
+    <style>
+        [u1-parallax] {
+            background:var(--color-light);
+            display:inline-block;
+            padding:.5rem;
+        }
+    </style>
