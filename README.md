@@ -9,6 +9,7 @@ Parallax your Elements
 
 
 ## Demos
+https://raw.githack.com/u1ui/parallax.attr/main/tests/minimal.html  
 https://raw.githack.com/u1ui/parallax.attr/main/tests/performance.html  
 https://raw.githack.com/u1ui/parallax.attr/main/tests/test.html  
 
