@@ -112,29 +112,8 @@ new SelectorObserver({
     on: (el) => {
         const parallaxObj = add(el);
         parallaxObj.connect();
-
-        //el.parallaxObj = add(el);
-        //this.parallaxObj.connect();
     },
     off: (el) => {
         remove(el)
     }
 }).observe('[u1-parallax]');
-
-
-/* *
-import 'https://cdn.jsdelivr.net/npm/wicked-elements@3.1.2/min.js';
-wickedElements.define(
-    '[u1-parallax]', {
-        init() {
-            this.parallaxObj = add(this.element);
-        },
-        connected() {
-            this.parallaxObj.connect();
-        },
-        disconnected() {
-            remove(this.element)
-        },
-    }
-);
-/* */
