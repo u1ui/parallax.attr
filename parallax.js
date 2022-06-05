@@ -68,7 +68,7 @@ function addGlobalListeners(){
     addEventListener('resize', onScroll);
     addEventListener('load', onScroll);
     document.addEventListener('scroll', onScroll);
-    addEventListener('wheel', onScroll); // firefox
+    addEventListener('wheel', onScroll); // firefox, scroll is async so wheel is faster
 }
 function removeGlobalListeners(){
     removeEventListener('resize',calcViewportRects);
@@ -82,11 +82,12 @@ function removeGlobalListeners(){
 
 // cache innerHeight, Is that of any use?
 let winHeight = document.documentElement.clientHeight; // was innerHeight // better this?: https://stackoverflow.com/questions/1248081/how-to-get-the-browser-viewport-dimensions
-let winWidth = innerWidth;
+let winWidth = document.documentElement.clientWidth;
 addEventListener('resize',(e)=>{
-    winHeight = document.documentElement.clientHeight; // was innerHeight
-    winWidth = innerWidth;
+    winHeight = document.documentElement.clientHeight;
+    winWidth = document.documentElement.clientWidth;
 });
+
 
 
 /* helpers */
