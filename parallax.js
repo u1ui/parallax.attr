@@ -108,7 +108,7 @@ function vpRectWithoutTransform(el){
 }
 
 /* */
-import {SelectorObserver} from 'https://cdn.jsdelivr.net/gh/u1ui/SelectorObserver.js@2.0.1/SelectorObserver.min.js'
+import {SelectorObserver} from 'https://cdn.jsdelivr.net/gh/u1ui/SelectorObserver.js@3.0.1/SelectorObserver.min.js'
 new SelectorObserver({
     on: (el) => {
         const parallaxObj = add(el);
