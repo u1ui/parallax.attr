@@ -12,7 +12,7 @@ Make every element scrolling at different speed
 
 https://raw.githack.com/u1ui/parallax.attr/main/tests/minimal.html  
 https://raw.githack.com/u1ui/parallax.attr/main/tests/performance.html  
-https://raw.githack.com/u1ui/parallax.attr/main/tests/test.html
+https://raw.githack.com/u1ui/parallax.attr/main/tests/test.html  
 
 ## Ussage:
 
@@ -44,12 +44,6 @@ https://github.com/nuxodin/parax-bg
 ```html
 <script src="https://cdn.jsdelivr.net/gh/u1ui/parallax.attr@3.0.0/parallax.min.js" type=module>
 ```
-
-## Demo
-
-https://raw.githack.com/u1ui/parallax.attr/main/tests/minimal.html  
-https://raw.githack.com/u1ui/parallax.attr/main/tests/performance.html  
-https://raw.githack.com/u1ui/parallax.attr/main/tests/test.html  
 
 ## About
 
