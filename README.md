@@ -36,7 +36,6 @@ Make every element scrolling at different speed
 [performance.html](http://gcdn.li/u1ui/parallax.attr@main/tests/performance.html)  
 [test.html](http://gcdn.li/u1ui/parallax.attr@main/tests/test.html)  
 
-
 ## Also interesting
 
 Parallax scrolling Backgrounds
@@ -46,3 +45,4 @@ https://github.com/nuxodin/parax-bg
 
 - MIT License, Copyright (c) 2022 <u1> (like all repositories in this organization) <br>
 - Suggestions, ideas, finding bugs and making pull requests make us very happy. ♥
+
