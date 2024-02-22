@@ -8,7 +8,7 @@ Make every element scrolling at different speed
 - works for dynamic added elements
 - lightweight < 4k minified
 
-## Ussage
+## Usage
 
 ```html
 <div u1-parallax style="--u1-parallax-speed:1.1;">faster</div>
